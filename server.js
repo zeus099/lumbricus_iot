@@ -140,6 +140,7 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3004, () => {
-    console.log('Server Web Dashboard berjalan di http://localhost:3004');
+const PORT = process.env.PORT || 3004;
+server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server Web Dashboard berjalan di port ${PORT}`);
 });
