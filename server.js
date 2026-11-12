@@ -65,9 +65,12 @@ app.get('/api/logs', (req, res) => {
     });
 });
 
-const MQTT_BROKER_URL = 'mqtt://192.168.1.13:1883';
-const mqttClient = mqtt.connect(MQTT_BROKER_URL);
-
+const MQTT_BROKER_URL = 'mqtts://h21e3286.ala.asia-southeast1.emqxsl.com:8883';
+const mqttOptions = {
+    username: 'esp32_lumbricus',
+    password: 'dani123'
+};
+const mqttClient = mqtt.connect(MQTT_BROKER_URL, mqttOptions);
 // State default lengkap dengan durasi
 let scheduleState = {
     enabled: false, days: 0x7F, hour: 8, minute: 0, auto_empty: true,
