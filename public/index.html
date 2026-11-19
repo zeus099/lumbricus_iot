@@ -805,12 +805,12 @@
             if (data.safe_temp === 1) {
                 tempBadge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400';
                 tempBadge.textContent = 'SAFE';
-                safeTempText.innerHTML = `Suhu ${(data.t_avg || 0).toFixed(1)}&deg;C (Normal) | Ideal: 15-25&deg;C`;
+                safeTempText.innerHTML = `Suhu ${(data.t_avg || 0).toFixed(1)}&deg;C`;
                 safeTempText.className = 'text-sm font-bold text-slate-800 dark:text-slate-200';
             } else {
                 tempBadge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-400';
                 tempBadge.textContent = 'ALERT';
-                safeTempText.innerHTML = `Suhu ${(data.t_avg || 0).toFixed(1)}&deg;C (Bahaya) | Ideal: 15-25&deg;C`;
+                safeTempText.innerHTML = `Suhu ${(data.t_avg || 0).toFixed(1)}&deg;C`;
                 safeTempText.className = 'text-sm font-bold text-red-600 dark:text-red-400';
             }
 
@@ -819,12 +819,12 @@
             if (data.safe_soil === 1) {
                 soilBadge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400';
                 soilBadge.textContent = 'SAFE';
-                safeSoilText.innerHTML = `Kelembapan ${(data.m_avg || 0).toFixed(1)}% (Basah) | Ideal: 60-80%`;
+                safeSoilText.innerHTML = `Kelembapan ${(data.m_avg || 0).toFixed(1)}%`;
                 safeSoilText.className = 'text-sm font-bold text-slate-800 dark:text-slate-200';
             } else {
                 soilBadge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-400';
                 soilBadge.textContent = 'ALERT';
-                safeSoilText.innerHTML = `Kelembapan ${(data.m_avg || 0).toFixed(1)}% (Kering) | Ideal: 60-80%`;
+                safeSoilText.innerHTML = `Kelembapan ${(data.m_avg || 0).toFixed(1)}%`;
                 safeSoilText.className = 'text-sm font-bold text-red-600 dark:text-red-400';
             }
 
